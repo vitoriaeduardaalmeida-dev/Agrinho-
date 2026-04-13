@@ -1,21 +1,32 @@
-function mostrarImpacto() {
-  const impacto = [
-    "Redução de até 30% no uso de água",
-    "Diminuição da emissão de carbono",
-    "Aumento da produtividade sustentável",
-    "Preservação da biodiversidade"
-  ];
+// Variável global para modo escuro
+let darkMode = false;
 
-  let lista = "<ul>";
-  impacto.forEach(item => {
-    lista += `<li>${item}</li>`;
-  });
-  lista += "</ul>";
+// Função para alternar modo escuro
+document.getElementById("modoBtn").addEventListener("click", () => {
+  darkMode = !darkMode;
 
-  document.getElementById("resultado").innerHTML = lista;
+  document.body.classList.toggle("dark");
+
+  document.getElementById("modoBtn").innerText =
+    darkMode ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+});
+
+// Função com variável (nome do usuário)
+function saudacao() {
+  let nome = document.getElementById("nome").value;
+
+  if (nome === "") {
+    document.getElementById("saida").innerText = "Digite um nome!";
+  } else {
+    document.getElementById("saida").innerText =
+      "Olá, " + nome + "! Vamos construir um agro sustentável.";
+  }
 }
 
-function enviarFormulario(event) {
+// Função de envio de formulário
+function enviar(event) {
   event.preventDefault();
-  document.getElementById("mensagem").innerText = "Mensagem enviada com sucesso!";
+
+  document.getElementById("status").innerText =
+    "Mensagem enviada com sucesso!";
 }
