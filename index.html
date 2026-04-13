@@ -3,64 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agro Forte - Futuro Sustentável</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Agro Forte</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<header>
+<header class="header">
   <h1>🌱 Agro Forte</h1>
-  <p>Futuro Sustentável: equilíbrio entre produção e meio ambiente</p>
+  <p id="mensagem">Futuro sustentável começa agora</p>
+
+  <button id="modoBtn">🌙 Modo Escuro</button>
 </header>
 
-<nav>
+<nav class="nav">
   <a href="#sobre">Sobre</a>
-  <a href="#praticas">Práticas Sustentáveis</a>
-  <a href="#impacto">Impacto</a>
-  <a href="#contato">Contato</a>
+  <a href="#form">Contato</a>
 </nav>
 
-<section id="sobre">
-  <h2>Sobre o Agro Sustentável</h2>
+<main>
+
+<section id="sobre" class="container">
+  <h2>Sobre o Projeto</h2>
   <p>
-    O agro sustentável busca produzir alimentos de forma eficiente,
-    respeitando os recursos naturais e garantindo qualidade de vida
-    para as futuras gerações.
+    Este projeto apresenta soluções para um agro produtivo e sustentável,
+    equilibrando tecnologia e preservação ambiental.
   </p>
 </section>
 
-<section id="praticas">
-  <h2>Práticas Sustentáveis</h2>
-  <ul>
-    <li>🌾 Rotação de culturas</li>
-    <li>💧 Uso inteligente da água</li>
-    <li>🌳 Preservação de áreas naturais</li>
-    <li>🚜 Agricultura de precisão</li>
-  </ul>
+<section id="interacao" class="container">
+  <h2>Interação</h2>
+
+  <label for="nome">Digite seu nome:</label>
+  <input type="text" id="nome" placeholder="Seu nome">
+
+  <button onclick="saudacao()">Enviar</button>
+
+  <p id="saida"></p>
 </section>
 
-<section id="impacto">
-  <h2>Impacto Ambiental</h2>
-  <p>Veja como pequenas ações podem gerar grandes mudanças:</p>
-  <button onclick="mostrarImpacto()">Mostrar Impacto</button>
-  <div id="resultado"></div>
-</section>
-
-<section id="contato">
+<section id="form" class="container">
   <h2>Contato</h2>
-  <form onsubmit="enviarFormulario(event)">
-    <input type="text" placeholder="Seu nome" required>
-    <input type="email" placeholder="Seu email" required>
-    <textarea placeholder="Sua mensagem" required></textarea>
+
+  <form onsubmit="enviar(event)">
+    <label>Email:</label>
+    <input type="email" required>
+
+    <label>Mensagem:</label>
+    <textarea required></textarea>
+
     <button type="submit">Enviar</button>
   </form>
-  <p id="mensagem"></p>
+
+  <p id="status"></p>
 </section>
 
-<footer>
-  <p>© 2026 Agro Forte - Sustentabilidade no campo</p>
+</main>
+
+<footer class="footer">
+  <p>© 2026 Agro Sustentável</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
