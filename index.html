@@ -2,68 +2,32 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <title>Agro Sustentável</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agro Forte</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="header">
+<header>
   <h1>🌱 Agro Forte</h1>
   <p id="mensagem">Futuro sustentável começa agora</p>
-
   <button id="modoBtn">🌙 Modo Escuro</button>
 </header>
 
-<nav class="nav">
-  <a href="#sobre">Sobre</a>
-  <a href="#form">Contato</a>
-</nav>
+<section>
+  <h2>Digite seu nome</h2>
 
-<main>
-
-<section id="sobre" class="container">
-  <h2>Sobre o Projeto</h2>
-  <p>
-    Este projeto apresenta soluções para um agro produtivo e sustentável,
-    equilibrando tecnologia e preservação ambiental.
-  </p>
-</section>
-
-<section id="interacao" class="container">
-  <h2>Interação</h2>
-
-  <label for="nome">Digite seu nome:</label>
-  <input type="text" id="nome" placeholder="Seu nome">
+  <label>Nome:</label>
+  <input type="text" id="nome">
 
   <button onclick="saudacao()">Enviar</button>
 
   <p id="saida"></p>
 </section>
 
-<section id="form" class="container">
-  <h2>Contato</h2>
-
-  <form onsubmit="enviar(event)">
-    <label>Email:</label>
-    <input type="email" required>
-
-    <label>Mensagem:</label>
-    <textarea required></textarea>
-
-    <button type="submit">Enviar</button>
-  </form>
-
-  <p id="status"></p>
-</section>
-
-</main>
-
-<footer class="footer">
-  <p>© 2026 Agro Sustentável</p>
-</footer>
-
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
