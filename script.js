@@ -1,32 +1,30 @@
-// Variável global para modo escuro
-let darkMode = false;
+// Espera o HTML carregar antes de executar
+document.addEventListener("DOMContentLoaded", function () {
 
-// Função para alternar modo escuro
-document.getElementById("modoBtn").addEventListener("click", () => {
-  darkMode = !darkMode;
+  let darkMode = false;
 
-  document.body.classList.toggle("dark");
+  const botao = document.getElementById("modoBtn");
 
-  document.getElementById("modoBtn").innerText =
-    darkMode ? "☀️ Modo Claro" : "🌙 Modo Escuro";
+  // Alternar modo escuro
+  botao.addEventListener("click", function () {
+    darkMode = !darkMode;
+    document.body.classList.toggle("dark");
+
+    botao.innerText = darkMode
+      ? "☀️ Modo Claro"
+      : "🌙 Modo Escuro";
+  });
+
 });
 
-// Função com variável (nome do usuário)
+// Função de saudação (usa variável)
 function saudacao() {
   let nome = document.getElementById("nome").value;
 
   if (nome === "") {
-    document.getElementById("saida").innerText = "Digite um nome!";
+    document.getElementById("saida").innerText = "Digite seu nome!";
   } else {
     document.getElementById("saida").innerText =
-      "Olá, " + nome + "! Vamos construir um agro sustentável.";
+      "Olá, " + nome + "!";
   }
-}
-
-// Função de envio de formulário
-function enviar(event) {
-  event.preventDefault();
-
-  document.getElementById("status").innerText =
-    "Mensagem enviada com sucesso!";
 }
