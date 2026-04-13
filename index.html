@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agro Forte - Futuro Sustentável</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #2e7d32;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background: #1b5e20;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background: #388e3c;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6') no-repeat center/cover;
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    button {
+      background: #2e7d32;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Agro Forte</h1>
+  <p>Futuro sustentável: equilíbrio entre produção e meio ambiente</p>
+</header>
+
+<nav>
+  <a href="#sobre">Sobre</a>
+  <a href="#sustentabilidade">Sustentabilidade</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section class="hero">
+  <h2>Produzir mais, preservando o futuro</h2>
+  <button onclick="mostrarMensagem()">Saiba Mais</button>
+</section>
+
+<section id="sobre" class="container">
+  <h2>Sobre o Agro</h2>
+  <p>O agronegócio é essencial para a economia e para a alimentação global. Com práticas sustentáveis, é possível aumentar a produtividade e preservar os recursos naturais.</p>
+</section>
+
+<section id="sustentabilidade" class="container">
+  <h2>Sustentabilidade</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Uso consciente da água</h3>
+      <p>Tecnologias de irrigação eficiente reduzem o desperdício.</p>
+    </div>
+    <div class="card">
+      <h3>Energia renovável</h3>
+      <p>Uso de energia solar e eólica no campo.</p>
+    </div>
+    <div class="card">
+      <h3>Preservação do solo</h3>
+      <p>Rotação de culturas e plantio direto mantêm o solo saudável.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contato" class="container">
+  <h2>Contato</h2>
+  <p>Entre em contato para saber mais sobre práticas sustentáveis no agro.</p>
+  <button onclick="contato()">Fale Conosco</button>
+</section>
+
+<footer>
+  <p>© 2026 Agro Forte | Sustentabilidade no campo</p>
+</footer>
+
+<script>
+  function mostrarMensagem() {
+    alert("O futuro do agro depende do equilíbrio entre produção e sustentabilidade.");
+  }
+
+  function contato() {
+    alert("Em breve, um formulário de contato estará disponível.");
+  }
+</script>
+
+</body>
+</html>
