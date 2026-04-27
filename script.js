@@ -1,24 +1,20 @@
-// Garante que tudo carregou antes de usar
+// Confirma que o JS carregou
+console.log("JS OK");
+
+// Espera carregar tudo
 window.onload = function () {
 
-  // BOTÃO MODO ESCURO
-  let darkMode = false;
   const botao = document.getElementById("modoBtn");
 
   if (botao) {
     botao.onclick = function () {
-      darkMode = !darkMode;
       document.body.classList.toggle("dark");
-
-      botao.innerText = darkMode
-        ? "☀️ Modo Claro"
-        : "🌙 Modo Escuro";
     };
   }
 
 };
 
-// FUNÇÃO DO BOTÃO ENVIAR
+// Botão enviar
 function saudacao() {
   const nome = document.getElementById("nome");
   const saida = document.getElementById("saida");
