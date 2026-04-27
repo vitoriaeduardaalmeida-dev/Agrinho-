@@ -1,3 +1,4 @@
+alert("JS funcionando!");
 // Garante que o HTML carregou
 window.onload = function () {
 
