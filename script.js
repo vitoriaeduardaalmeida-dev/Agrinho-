@@ -1,38 +1,30 @@
-// contador de ações sustentáveis
-let total = 0;
+// Garante que o HTML carregou
+window.onload = function () {
 
-function adicionarAcao() {
-  total++;
-  document.getElementById("contador").innerText = total;
-}
+  // BOTÃO MODO ESCURO
+  let darkMode = false;
+  const botao = document.getElementById("modoBtn");
 
-// mostrar práticas
-function mostrarPraticas() {
-  const lista = document.getElementById("lista");
+  botao.onclick = function () {
+    darkMode = !darkMode;
 
-  if (lista.classList.contains("hidden")) {
-    lista.classList.remove("hidden");
+    document.body.classList.toggle("dark");
+
+    botao.innerText = darkMode
+      ? "☀️ Modo Claro"
+      : "🌙 Modo Escuro";
+  };
+
+};
+
+// FUNÇÃO DO BOTÃO ENVIAR
+function saudacao() {
+  const nome = document.getElementById("nome").value;
+  const saida = document.getElementById("saida");
+
+  if (!nome) {
+    saida.innerText = "Digite seu nome!";
   } else {
-    lista.classList.add("hidden");
+    saida.innerText = "Olá, " + nome + "!";
   }
 }
-
-// mensagem personalizada
-function mensagem() {
-  let nome = document.getElementById("nome").value;
-
-  if (nome === "") {
-    document.getElementById("resposta").innerText = "Digite seu nome!";
-  } else {
-    document.getElementById("resposta").innerText =
-      "Obrigado, " + nome + ", por apoiar o agro sustentável!";
-  }
-}
-
-// modo escuro
-let dark = false;
-
-document.getElementById("temaBtn").addEventListener("click", () => {
-  dark = !dark;
-  document.body.classList.toggle("dark");
-});
