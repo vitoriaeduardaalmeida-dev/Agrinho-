@@ -13,6 +13,17 @@ window.onload = function () {
   }
 
 };
-  
+
+// Botão enviar
+function saudacao() {
+  const nome = document.getElementById("nome");
+  const saida = document.getElementById("saida");
+
+  if (!nome || !saida) return;
+
+  if (nome.value === "") {
+    saida.innerText = "Digite seu nome!";
+  } else {
+    saida.innerText = "Olá, " + nome.value + "!";
   }
 }
