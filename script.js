@@ -3,27 +3,44 @@ console.log("JS OK");
 
 // Espera carregar tudo
 window.onload = function () {
+    // Corrigido para "temaBtn", que é o ID no HTML
+    const botao = document.getElementById("temaBtn");
 
-  const botao = document.getElementById("modoBtn");
-
-  if (botao) {
-    botao.onclick = function () {
-      document.body.classList.toggle("dark");
-    };
-  }
-
+    if (botao) {
+        botao.onclick = function () {
+            document.body.classList.toggle("dark");
+        };
+    }
 };
 
-// Botão enviar
-function saudacao() {
-  const nome = document.getElementById("nome");
-  const saida = document.getElementById("saida");
+// Botão enviar (Corrigido para o nome mensagem() que está no HTML)
+function mensagem() {
+    const nomeInput = document.getElementById("nome");
+    const saida = document.getElementById("resposta"); // Corrigido de "saida" para "resposta"
 
-  if (!nome || !saida) return;
+    if (!nomeInput || !saida) return;
 
-  if (nome.value === "") {
-    saida.innerText = "Digite seu nome!";
-  } else {
-    saida.innerText = "Olá, " + nome.value + "!";
-  }
+    if (nomeInput.value.trim() === "") {
+        saida.innerText = "Por favor, digite seu nome!";
+    } else {
+        saida.innerText = "Olá, " + nomeInput.value + "! Agradecemos o contato.";
+    }
+}
+
+// Função para o contador de ações (que você tem no HTML)
+let Cliques = 0;
+function adicionarAção() {
+    Cliques++;
+    const contador = document.getElementById("contador");
+    if (contador) {
+        contador.innerText = Cliques;
+    }
+}
+
+// Função para mostrar as práticas
+function mostrarPráticas() {
+    const lista = document.getElementById("lista");
+    if (lista) {
+        lista.classList.toggle("escondido");
+    }
 }
