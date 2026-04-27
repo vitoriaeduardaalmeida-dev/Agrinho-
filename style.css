@@ -1,57 +1,78 @@
 /* Reset */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
+    transition: background 0.3s, color 0.3s; /* Suaviza a troca de tema */
 }
 
 /* Cabeçalho */
 header {
-  background: linear-gradient(90deg, #2e7d32, #66bb6a);
-  color: white;
-  padding: 25px;
-  text-align: center;
+    background: linear-gradient(90deg, #2e7d32, #66bb6a);
+    color: white;
+    padding: 25px;
+    text-align: center;
 }
 
 /* Botão */
 button {
-  background: #2e7d32;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: 0.3s;
-  border-radius: 5px;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    border-radius: 5px;
+    display: inline-block; /* Garante bom posicionamento */
 }
 
 button:hover {
-  background: #1b5e20;
-  transform: scale(1.05);
+    background-color: #1b5e20;
+    transform: scale(1.05);
 }
 
 /* Seção */
 section {
-  background: white;
-  margin: 40px auto;
-  padding: 20px;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: white;
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centraliza o conteúdo interno */
 }
 
 /* Input */
 input {
-  padding: 8px;
-  margin: 10px;
+    padding: 8px;
+    margin: 10px 0; /* Ajustado para espaçamento vertical */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 80%; /* Para não ficar colado nas bordas da seção */
+}
+
+/* Lista Escondida (necessário para a função JS que adicionamos antes) */
+.escondido {
+    display: none;
 }
 
 /* Dark Mode */
 .dark {
-  background: #121212;
-  color: white;
+    background: #121212; /* Remove o gradient no modo dark para melhor leitura */
+    color: white;
 }
 
 .dark section {
-  background: #1e1e1e;
+    background: #1e1e1e;
+    color: white;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+/* Ajuste para inputs no modo dark */
+.dark input {
+    background: #333;
+    color: white;
+    border-color: #555;
 }
