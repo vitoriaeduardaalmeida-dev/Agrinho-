@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Função de saudação (usa variável)
-function saudacao() {
+function index.html() {
   let nome = document.getElementById("nome").value;
 
   if (nome === "") {
