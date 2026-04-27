@@ -1,72 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Agro Futuro Sustentável</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Agro Futuro Sustentável</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-<header class="topo">
-  <h1>🌿 Agro Futuro</h1>
-  <p id="frase">Produzir mais, preservando sempre</p>
+    <header class="topo">
+        <h1>🌱 Agro Futuro</h1>
+        <p id="frase">Produzir mais, preservando sempre</p>
+        <button id="temaBtn">🌙 Tema</button>
+    </header>
 
-  <button id="temaBtn">🌙 Tema</button>
-</header>
+    <nav class="menu">
+        <a href="#impacto">Impacto</a>
+        <a href="#acoes">Ações</a>
+        <a href="#contato">Contato</a>
+    </nav>
 
-<nav class="menu">
-  <a href="#impacto">Impacto</a>
-  <a href="#acoes">Ações</a>
-  <a href="#contato">Contato</a>
-</nav>
+    <main>
+        <section id="impacto" class="caixa">
+            <h2>Impacto Sustentável</h2>
+            <p>Simule ações ecológicas:</p>
+            <button onclick="adicionarAção()">+ Ação Sustentável</button>
+            <h3 id="contador">0</h3>
+        </section>
 
-<main>
+        <section id="acoes" class="caixa">
+            <h2>Boas práticas</h2>
+            <button onclick="mostrarPráticas()">Mostrar práticas</button>
+            
+            <div id="lista" class="escondido">
+                <ul>
+                    <li>🌱 Plantio consciente</li>
+                    <li>💧 Economia de água</li>
+                    <li>🌳 Preservação ambiental</li>
+                    <li>🚜 Tecnologia no campo</li>
+                </ul>
+            </div>
+        </section>
 
-<section id="impacto" class="box">
-  <h2>Impacto Sustentável</h2>
+        <section id="contato" class="caixa">
+            <h2>Fale com a gente</h2>
+            <label>Nome:</label>
+            <input type="text" id="nome">
+            <button onclick="mensagem()">🐰</button>
+            <p id="resposta"></p>
+        </section>
+    </main>
 
-  <p>Simule ações ecológicas:</p>
+    <footer>
+        <p>© 2026 Agro Futuro</p>
+    </footer>
 
-  <button onclick="adicionarAcao()">+ Ação Sustentável</button>
-  <h3 id="contador">0</h3>
-
-</section>
-
-<section id="acoes" class="box">
-  <h2>Boas Práticas</h2>
-
-  <button onclick="mostrarPraticas()">Mostrar práticas</button>
-
-  <div id="lista" class="hidden">
-    <ul>
-      <li>🌱 Plantio consciente</li>
-      <li>💧 Economia de água</li>
-      <li>🌳 Preservação ambiental</li>
-      <li>🚜 Tecnologia no campo</li>
-    </ul>
-  </div>
-</section>
-
-<section id="contato" class="box">
-  <h2>Fale com a gente</h2>
-
-  <label>Nome:</label>
-  <input type="text" id="nome">
-
-  <button onclick="mensagem()">Enviar</button>
-
-  <p id="resposta"></p>
-</section>
-
-</main>
-
-<footer>
-  <p>© 2026 Agro Futuro</p>
-</footer>
-
-<script src="js/script.js"></script>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
