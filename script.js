@@ -24,10 +24,6 @@ function saudacao() {
   if (nome.value === "") {
     saida.innerText = "Digite seu nome!";
   } else {
-    saida.innerText = "Olá, " + nome.value + "!";
-    document.addEventListener('DOMContentLoaded', () => {
-    // Coloque aqui as funções dos seus botões
-    console.log("O script carregou e os botões estão prontos!");
-});
+  
   }
 }
