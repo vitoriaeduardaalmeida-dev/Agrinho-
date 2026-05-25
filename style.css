@@ -99,8 +99,13 @@ nav a:hover{
     transform:scale(1.05);
 }
 
+/* IMAGEM ARRUMADA */
+
 .hero-image img{
-    width:550px;
+    width:100%;
+    max-width:500px;
+    height:auto;
+    object-fit:cover;
     border-radius:30px;
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
@@ -269,6 +274,7 @@ footer{
 
     .hero-image img{
         width:100%;
+        max-width:350px;
     }
 
     nav{
