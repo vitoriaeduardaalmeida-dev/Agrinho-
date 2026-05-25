@@ -1,188 +1,241 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
 
-<title>AgroTech Sustentável</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="style.css">
+    <title>AgroTech Sustentável</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="style.css" />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
 
-<header>
+    <!-- ACESSIBILIDADE -->
 
-    <div class="logo">
-        🌱 AgroTech Sustentável
-    </div>
+    <aside class="acessibilidade" aria-label="Ferramentas de acessibilidade">
 
-    <nav>
+        <button id="aumentar-fonte">A+</button>
 
-        <a href="#">Início</a>
+        <button id="diminuir-fonte">A-</button>
 
-        <a href="#">Sobre</a>
+        <button id="tema-btn">🌙</button>
 
-        <a href="#">Galeria</a>
+        <button id="ler-pagina">🔊</button>
 
-        <a href="#">Vídeos</a>
+        <button id="parar-leitura">⏹</button>
 
-        <a href="#">Contato</a>
+    </aside>
 
-    </nav>
+    <!-- HEADER -->
 
-    <button id="tema-btn">
-        🌙 Tema
-    </button>
+    <header>
 
-</header>
+        <div class="logo">
+            🌱 AgroTech Sustentável
+        </div>
 
-<section class="hero">
+        <nav>
 
-    <div class="hero-text">
+            <a href="#inicio">Início</a>
 
-        <h1>
-            Tecnologia que transforma o campo
-        </h1>
+            <a href="#sobre">Sobre</a>
+
+            <a href="#galeria">Galeria</a>
+
+            <a href="#videos">Vídeos</a>
+
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main id="conteudo-principal">
+
+        <!-- HERO -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <h1>
+                    Tecnologia que transforma o campo
+                </h1>
+
+                <p>
+                    Soluções inteligentes e sustentáveis para impulsionar a produtividade agrícola e proteger o meio ambiente.
+                </p>
+
+                <button class="btn">
+                    Saiba Mais 🚀
+                </button>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854"
+                    alt="Plantação agrícola sustentável">
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE -->
+
+        <section id="sobre">
+
+            <h2>Sobre Nós</h2>
+
+            <p class="texto-central">
+                Desenvolvemos soluções tecnológicas voltadas para o agronegócio sustentável, promovendo inovação, produtividade e respeito ao meio ambiente.
+            </p>
+
+        </section>
+
+        <!-- CARDS -->
+
+        <section class="cards-section">
+
+            <h2>Nossos Diferenciais</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909768.png"
+                        alt="Ícone inovação">
+
+                    <h3>Inovação</h3>
+
+                    <p>
+                        Tecnologia moderna aplicada ao agronegócio.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png"
+                        alt="Ícone sustentabilidade">
+
+                    <h3>Sustentabilidade</h3>
+
+                    <p>
+                        Produção agrícola respeitando a natureza.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+                        alt="Ícone produtividade">
+
+                    <h3>Produtividade</h3>
+
+                    <p>
+                        Mais eficiência com menos desperdício.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- GALERIA -->
+
+        <section class="galeria-section" id="galeria">
+
+            <h2>Galeria de Projetos</h2>
+
+            <div class="galeria">
+
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399"
+                    alt="Agricultura sustentável">
+
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+                    alt="Plantação verde">
+
+                <img src="https://images.unsplash.com/photo-1492496913980-501348b61469"
+                    alt="Campo agrícola">
+
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                    alt="Tecnologia no agro">
+
+            </div>
+
+        </section>
+
+        <!-- VÍDEOS -->
+
+        <section class="videos-section" id="videos">
+
+            <h2>Nossos Vídeos</h2>
+
+            <div class="videos">
+
+                <iframe src="https://www.youtube.com/embed/7K1sB05pE0A"
+                    title="Tecnologia no Agro"
+                    allowfullscreen>
+                </iframe>
+
+                <iframe src="https://www.youtube.com/embed/2wLNJr45R9o"
+                    title="Sustentabilidade no Campo"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+
+        <section class="contato-section" id="contato">
+
+            <h2>Fale Conosco</h2>
+
+            <form>
+
+                <input type="text" placeholder="Seu nome" />
+
+                <input type="email" placeholder="Seu email" />
+
+                <textarea placeholder="Digite sua mensagem"></textarea>
+
+                <button type="submit" class="btn">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+
+    <footer>
 
         <p>
-            Soluções inteligentes e sustentáveis para impulsionar a produtividade agrícola e proteger o meio ambiente.
+            © 2026 AgroTech Sustentável
         </p>
 
-        <button>
-            Saiba Mais 🚀
-        </button>
+    </footer>
 
-    </div>
-
-    <div class="hero-image">
-
-        <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854">
-
-    </div>
-
-</section>
-
-<section class="cards-section">
-
-    <h2>Nossos Diferenciais</h2>
-
-    <div class="cards">
-
-        <div class="card">
-
-            <img src="https://cdn-icons-png.flaticon.com/512/2909/2909768.png">
-
-            <h3>Inovação</h3>
-
-            <p>
-                Tecnologia moderna aplicada ao agronegócio.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png">
-
-            <h3>Sustentabilidade</h3>
-
-            <p>
-                Produção agrícola respeitando a natureza.
-            </p>
-
-        </div>
-
-        <div class="card">
-
-            <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png">
-
-            <h3>Produtividade</h3>
-
-            <p>
-                Mais eficiência com menos desperdício.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section class="galeria-section">
-
-    <h2>Galeria de Projetos</h2>
-
-    <div class="galeria">
-
-        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
-
-        <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6">
-
-        <img src="https://images.unsplash.com/photo-1492496913980-501348b61469">
-
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-
-    </div>
-
-</section>
-
-<section class="videos-section">
-
-    <h2>Nossos Vídeos</h2>
-
-    <div class="videos">
-
-        <iframe 
-        src="https://www.youtube.com/embed/7K1sB05pE0A"
-        title="Tecnologia no Agro"
-        allowfullscreen>
-        </iframe>
-
-        <iframe 
-        src="https://www.youtube.com/embed/2wLNJr45R9o"
-        title="Sustentabilidade no Campo"
-        allowfullscreen>
-        </iframe>
-
-    </div>
-
-</section>
-
-<section class="contato-section">
-
-    <h2>Fale Conosco</h2>
-
-    <form>
-
-        <input type="text" placeholder="Seu nome">
-
-        <input type="email" placeholder="Seu email">
-
-        <textarea placeholder="Digite sua mensagem"></textarea>
-
-        <button type="submit">
-            Enviar Mensagem
-        </button>
-
-    </form>
-
-</section>
-
-<footer>
-
-    <p>
-        © 2026 AgroTech Sustentável
-    </p>
-
-</footer>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>
