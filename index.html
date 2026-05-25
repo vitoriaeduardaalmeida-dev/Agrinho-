@@ -1,61 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Agro Futuro Sustentável</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AgroTech Sustentável</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <header class="topo">
-        <h1>🌱 Agro Futuro</h1>
-        <p id="frase">Produzir mais, preservando sempre</p>
-        <button id="temaBtn">🌙 Tema</button>
-    </header>
+<header>
+    <h1>🌱 AgroTech Sustentável</h1>
+    <button id="tema-btn">🌙 Alternar Tema</button>
+</header>
 
-    <nav class="menu">
-        <a href="#impacto">Impacto</a>
-        <a href="#acoes">Ações</a>
-        <a href="#contato">Contato</a>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="#">Início</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Galeria</a></li>
+        <li><a href="#">Vídeos</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+</nav>
 
-    <main>
-        <section id="impacto" class="caixa">
-            <h2>Impacto Sustentável</h2>
-            <p>Simule ações ecológicas:</p>
-            <button onclick="adicionarAção()">+ Ação Sustentável</button>
-            <h3 id="contador">0</h3>
-        </section>
+<section class="hero">
+    <h2>Inovação no Campo</h2>
+    <p>Tecnologia e sustentabilidade trabalhando juntas pelo futuro do agro.</p>
+</section>
 
-        <section id="acoes" class="caixa">
-            <h2>Boas práticas</h2>
-            <button onclick="mostrarPráticas()">Mostrar práticas</button>
-            
-            <div id="lista" class="escondido">
-                <ul>
-                    <li>🌱 Plantio consciente</li>
-                    <li>💧 Economia de água</li>
-                    <li>🌳 Preservação ambiental</li>
-                    <li>🚜 Tecnologia no campo</li>
-                </ul>
-            </div>
-        </section>
+<div class="container">
 
-        <section id="contato" class="caixa">
-            <h2>Fale com a gente</h2>
-            <label>Nome:</label>
-            <input type="text" id="nome">
-            <button onclick="mensagem()">🐰</button>
-            <p id="resposta"></p>
-        </section>
-    </main>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854" alt="">
+            <h3>Agricultura Inteligente</h3>
+            <p>Uso de sensores e automação para melhorar a produção.</p>
+        </div>
 
-    <footer>
-        <p>© 2026 Agro Futuro</p>
-    </footer>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399" alt="">
+            <h3>Sustentabilidade</h3>
+            <p>Produção agrícola respeitando o meio ambiente.</p>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6" alt="">
+            <h3>Energia Verde</h3>
+            <p>Soluções renováveis para propriedades rurais.</p>
+        </div>
+    </div>
+
+    <h2>Galeria</h2>
+
+    <div class="galeria">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+        <img src="https://images.unsplash.com/photo-1492496913980-501348b61469">
+        <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399">
+    </div>
+
+    <h2>Vídeos</h2>
+
+    <div class="videos">
+        <iframe src="https://www.youtube.com/embed/8PmM6SUn7Es"></iframe>
+
+        <iframe src="https://www.youtube.com/embed/z8xUCzToff8"></iframe>
+    </div>
+
+    <h2>Contato</h2>
+
+    <form>
+        <input type="text" placeholder="Seu nome">
+        <input type="email" placeholder="Seu email">
+        <textarea placeholder="Digite sua mensagem"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+
+</div>
+
+<footer>
+    <p>© 2026 AgroTech Sustentável</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
