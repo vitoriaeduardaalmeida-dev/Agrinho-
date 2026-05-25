@@ -1,126 +1,144 @@
+:root{
+    --fonte-base: 16px;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
+}
+
+html{
+    font-size:var(--fonte-base);
+    scroll-behavior:smooth;
 }
 
 body{
-    background:#f5fff5;
+    font-family:'Poppins', sans-serif;
+    background:#f4fff4;
     color:#222;
     transition:0.4s;
+    line-height:1.6;
+}
+
+/* ACESSIBILIDADE */
+
+.acessibilidade{
+    position:fixed;
+    top:50%;
+    right:1rem;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:0.8rem;
+    z-index:9999;
+}
+
+.acessibilidade button{
+    width:3rem;
+    height:3rem;
+    border:none;
+    border-radius:50%;
+    background:#1b4332;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.acessibilidade button:hover{
+    transform:scale(1.1);
 }
 
 /* HEADER */
 
 header{
     width:100%;
-    padding:20px 8%;
+    padding:1.2rem 6vw;
     background:linear-gradient(90deg,#1b4332,#2d6a4f);
     display:flex;
     justify-content:space-between;
     align-items:center;
-    position:sticky;
-    top:0;
-    z-index:1000;
+    flex-wrap:wrap;
+    gap:1rem;
 }
 
 .logo{
     color:white;
-    font-size:1.5rem;
+    font-size:clamp(1.2rem,2vw,2rem);
     font-weight:700;
 }
 
 nav{
     display:flex;
-    gap:25px;
+    flex-wrap:wrap;
+    gap:1.5rem;
 }
 
 nav a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
     font-weight:500;
-    transition:0.3s;
-}
-
-nav a:hover{
-    color:#95d5b2;
-}
-
-#tema-btn{
-    padding:10px 20px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    background:white;
-    font-weight:600;
 }
 
 /* HERO */
 
 .hero{
     min-height:90vh;
-    display:flex;
-    justify-content:space-between;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
     align-items:center;
-    padding:60px 8%;
-    gap:40px;
-}
-
-.hero-text{
-    max-width:550px;
+    gap:3rem;
+    padding:5rem 6vw;
 }
 
 .hero-text h1{
-    font-size:4rem;
-    line-height:1.1;
+    font-size:clamp(2rem,6vw,4.5rem);
     color:#1b4332;
-    margin-bottom:25px;
+    margin-bottom:1.5rem;
 }
 
 .hero-text p{
-    font-size:1.2rem;
-    margin-bottom:30px;
-    line-height:1.7;
+    font-size:clamp(1rem,2vw,1.3rem);
+    margin-bottom:2rem;
 }
 
-.hero-text button{
-    padding:16px 35px;
+.btn{
+    padding:1rem 2rem;
     border:none;
-    border-radius:40px;
+    border-radius:3rem;
     background:linear-gradient(90deg,#2d6a4f,#52b788);
     color:white;
-    font-size:1rem;
     cursor:pointer;
-    transition:0.3s;
+    font-size:1rem;
 }
-
-.hero-text button:hover{
-    transform:scale(1.05);
-}
-
-/* IMAGEM ARRUMADA */
 
 .hero-image img{
     width:100%;
-    max-width:500px;
-    height:auto;
+    max-width:550px;
+    border-radius:2rem;
     object-fit:cover;
-    border-radius:30px;
     box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* SEÇÕES */
 
 section{
-    padding:80px 8%;
+    padding:5rem 6vw;
 }
 
 section h2{
     text-align:center;
-    margin-bottom:50px;
-    font-size:2.5rem;
+    font-size:clamp(2rem,5vw,3rem);
     color:#1b4332;
+    margin-bottom:2rem;
+}
+
+.texto-central{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
 }
 
 /* CARDS */
@@ -128,16 +146,15 @@ section h2{
 .cards{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    gap:2rem;
 }
 
 .card{
-    background:rgba(255,255,255,0.8);
-    backdrop-filter:blur(10px);
-    padding:40px;
-    border-radius:25px;
+    background:white;
+    padding:2rem;
+    border-radius:1.5rem;
     text-align:center;
-    box-shadow:0 8px 25px rgba(0,0,0,0.1);
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
     transition:0.4s;
 }
 
@@ -147,12 +164,7 @@ section h2{
 
 .card img{
     width:80px;
-    margin-bottom:20px;
-}
-
-.card h3{
-    margin-bottom:15px;
-    color:#2d6a4f;
+    margin-bottom:1rem;
 }
 
 /* GALERIA */
@@ -160,69 +172,54 @@ section h2{
 .galeria{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
+    gap:1.5rem;
 }
 
 .galeria img{
     width:100%;
-    height:250px;
+    height:300px;
     object-fit:cover;
-    border-radius:20px;
-    transition:0.4s;
-}
-
-.galeria img:hover{
-    transform:scale(1.04);
+    border-radius:1.5rem;
 }
 
 /* VIDEOS */
 
 .videos{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:25px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:2rem;
 }
 
 iframe{
     width:100%;
-    height:250px;
+    min-height:250px;
     border:none;
-    border-radius:20px;
+    border-radius:1.5rem;
 }
 
-/* CONTATO */
+/* FORM */
 
-.contato-section form{
+form{
     max-width:700px;
     margin:auto;
     display:flex;
     flex-direction:column;
-    gap:20px;
+    gap:1.5rem;
 }
 
 input,
 textarea{
-    padding:18px;
+    padding:1rem;
     border:none;
-    border-radius:15px;
+    border-radius:1rem;
     background:white;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
     font-size:1rem;
 }
 
 textarea{
-    height:160px;
+    min-height:180px;
     resize:none;
-}
-
-form button{
-    padding:18px;
-    border:none;
-    border-radius:15px;
-    background:linear-gradient(90deg,#1b4332,#40916c);
-    color:white;
-    font-size:1rem;
-    cursor:pointer;
 }
 
 /* FOOTER */
@@ -231,7 +228,7 @@ footer{
     background:#1b4332;
     color:white;
     text-align:center;
-    padding:30px;
+    padding:2rem;
 }
 
 /* MODO ESCURO */
@@ -245,6 +242,10 @@ footer{
     background:#000;
 }
 
+.dark footer{
+    background:#000;
+}
+
 .dark .card{
     background:#1e1e1e;
 }
@@ -255,30 +256,20 @@ footer{
     color:white;
 }
 
-.dark footer{
-    background:#000;
-}
+/* RESPONSIVIDADE */
 
-/* RESPONSIVO */
+@media(max-width:768px){
 
-@media(max-width:900px){
+    nav{
+        justify-content:center;
+    }
 
     .hero{
-        flex-direction:column;
         text-align:center;
     }
 
-    .hero-text h1{
-        font-size:3rem;
-    }
-
-    .hero-image img{
-        width:100%;
-        max-width:350px;
-    }
-
-    nav{
-        display:none;
+    .acessibilidade{
+        right:0.5rem;
     }
 
 }
