@@ -1,5 +1,7 @@
-const botaoTema = document.getElementById("tema-btn");
+const temaBtn = document.getElementById("tema-btn");
 
-botaoTema.addEventListener("click", () => {
+temaBtn.addEventListener("click", () => {
+
     document.body.classList.toggle("dark");
+
 });
