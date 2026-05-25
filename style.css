@@ -1,78 +1,208 @@
-/* Reset */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-    min-height: 100vh; /* Garante que o fundo cubra a tela toda */
-    transition: background 0.3s, color 0.3s; /* Suaviza a troca de tema */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-/* Cabeçalho */
-header {
-    background: linear-gradient(90deg, #2e7d32, #66bb6a);
-    color: white;
-    padding: 25px;
-    text-align: center;
+body{
+    background: linear-gradient(to bottom, #eef7ee, #d8f3dc);
+    color:#222;
+    transition:0.4s;
 }
 
-/* Botão */
-button {
-    background-color: #2e7d32;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: 0.3s;
-    border-radius: 5px;
-    display: inline-block; /* Garante bom posicionamento */
+/* MODO ESCURO */
+body.dark{
+    background:#121212;
+    color:white;
 }
 
-button:hover {
-    background-color: #1b5e20;
-    transform: scale(1.05);
+body.dark header{
+    background:#1b5e20;
 }
 
-/* Seção */
-section {
-    background: white;
-    margin: 40px auto;
-    padding: 20px;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Centraliza o conteúdo interno */
+body.dark nav{
+    background:#0d3b12;
 }
 
-/* Input */
-input {
-    padding: 8px;
-    margin: 10px 0; /* Ajustado para espaçamento vertical */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 80%; /* Para não ficar colado nas bordas da seção */
+body.dark .card{
+    background:#1e1e1e;
+    color:white;
 }
 
-/* Lista Escondida (necessário para a função JS que adicionamos antes) */
-.escondido {
-    display: none;
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#2e7d32,#43a047);
+    color:white;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 3px 10px rgba(0,0,0,0.2);
 }
 
-/* Dark Mode */
-.dark {
-    background: #121212; /* Remove o gradient no modo dark para melhor leitura */
-    color: white;
+header h1{
+    font-size:2rem;
+    margin-bottom:15px;
 }
 
-.dark section {
-    background: #1e1e1e;
-    color: white;
-    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+/* BOTÃO */
+#tema-btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:30px;
+    background:white;
+    color:#2e7d32;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
 }
 
-/* Ajuste para inputs no modo dark */
-.dark input {
-    background: #333;
-    color: white;
-    border-color: #555;
+#tema-btn:hover{
+    transform:scale(1.05);
+}
+
+/* MENU */
+nav{
+    background:#1b5e20;
+    padding:15px;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#c8e6c9;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.hero h2{
+    font-size:3rem;
+    margin-bottom:20px;
+    color:#1b5e20;
+}
+
+.hero p{
+    font-size:1.2rem;
+}
+
+/* CARDS */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin:50px 0;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+    height:180px;
+    object-fit:cover;
+}
+
+/* GALERIA */
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+.galeria img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:15px;
+    transition:0.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.03);
+}
+
+/* VIDEOS */
+.videos{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+    margin:40px 0;
+}
+
+iframe{
+    width:100%;
+    height:220px;
+    border:none;
+    border-radius:15px;
+}
+
+/* CONTATO */
+form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin:40px auto;
+    max-width:500px;
+}
+
+input, textarea{
+    padding:15px;
+    border-radius:10px;
+    border:1px solid #ccc;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    background:#2e7d32;
+    color:white;
+    cursor:pointer;
+    font-size:1rem;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+/* FOOTER */
+footer{
+    background:#1b5e20;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
 }
