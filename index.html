@@ -2,18 +2,16 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AgroTech Sustentável</title>
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
 </head>
 
 <body>
@@ -22,19 +20,29 @@
 
     <aside class="acessibilidade" aria-label="Ferramentas de acessibilidade">
 
-        <button id="aumentar-fonte">A+</button>
+        <button id="aumentar-fonte" title="Aumentar fonte">
+            A+
+        </button>
 
-        <button id="diminuir-fonte">A-</button>
+        <button id="diminuir-fonte" title="Diminuir fonte">
+            A-
+        </button>
 
-        <button id="tema-btn">🌙</button>
+        <button id="tema-btn" title="Modo escuro ou claro">
+            🌙
+        </button>
 
-        <button id="ler-pagina">🔊</button>
+        <button id="ler-pagina" title="Ler conteúdo">
+            🔊
+        </button>
 
-        <button id="parar-leitura">⏹</button>
+        <button id="parar-leitura" title="Parar leitura">
+            ⏹
+        </button>
 
     </aside>
 
-    <!-- HEADER -->
+    <!-- CABEÇALHO -->
 
     <header>
 
@@ -47,6 +55,8 @@
             <a href="#inicio">Início</a>
 
             <a href="#sobre">Sobre</a>
+
+            <a href="#beneficios">Benefícios</a>
 
             <a href="#galeria">Galeria</a>
 
@@ -69,15 +79,17 @@
             <div class="hero-text">
 
                 <h1>
-                    Tecnologia que transforma o campo
+                    Agro Forte, Futuro Sustentável
                 </h1>
 
                 <p>
-                    Soluções inteligentes e sustentáveis para impulsionar a produtividade agrícola e proteger o meio ambiente.
+                    Equilíbrio entre produção agrícola e preservação ambiental.
+                    A tecnologia impulsiona a produtividade enquanto protege os
+                    recursos naturais para as próximas gerações.
                 </p>
 
                 <button class="btn">
-                    Saiba Mais 🚀
+                    Saiba Mais 🚜
                 </button>
 
             </div>
@@ -95,31 +107,34 @@
 
         <section id="sobre">
 
-            <h2>Sobre Nós</h2>
+            <h2>Sobre o Projeto</h2>
 
             <p class="texto-central">
-                Desenvolvemos soluções tecnológicas voltadas para o agronegócio sustentável, promovendo inovação, produtividade e respeito ao meio ambiente.
+                O agronegócio sustentável busca produzir alimentos de forma
+                eficiente e responsável, reduzindo impactos ambientais,
+                preservando a biodiversidade e utilizando recursos naturais
+                de maneira consciente.
             </p>
 
         </section>
 
-        <!-- CARDS -->
+        <!-- BENEFÍCIOS -->
 
-        <section class="cards-section">
+        <section id="beneficios">
 
-            <h2>Nossos Diferenciais</h2>
+            <h2>Benefícios da Agricultura Sustentável</h2>
 
             <div class="cards">
 
                 <article class="card">
 
                     <img src="https://cdn-icons-png.flaticon.com/512/2909/2909768.png"
-                        alt="Ícone inovação">
+                        alt="Tecnologia">
 
                     <h3>Inovação</h3>
 
                     <p>
-                        Tecnologia moderna aplicada ao agronegócio.
+                        Uso de sensores, drones e inteligência agrícola.
                     </p>
 
                 </article>
@@ -127,12 +142,12 @@
                 <article class="card">
 
                     <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png"
-                        alt="Ícone sustentabilidade">
+                        alt="Sustentabilidade">
 
                     <h3>Sustentabilidade</h3>
 
                     <p>
-                        Produção agrícola respeitando a natureza.
+                        Produção com menor impacto ao meio ambiente.
                     </p>
 
                 </article>
@@ -140,12 +155,12 @@
                 <article class="card">
 
                     <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
-                        alt="Ícone produtividade">
+                        alt="Produtividade">
 
                     <h3>Produtividade</h3>
 
                     <p>
-                        Mais eficiência com menos desperdício.
+                        Maior eficiência e redução de desperdícios.
                     </p>
 
                 </article>
@@ -156,23 +171,23 @@
 
         <!-- GALERIA -->
 
-        <section class="galeria-section" id="galeria">
+        <section id="galeria">
 
-            <h2>Galeria de Projetos</h2>
+            <h2>Galeria</h2>
 
             <div class="galeria">
 
                 <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399"
-                    alt="Agricultura sustentável">
+                    alt="Plantação">
 
                 <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
-                    alt="Plantação verde">
+                    alt="Campo verde">
 
                 <img src="https://images.unsplash.com/photo-1492496913980-501348b61469"
-                    alt="Campo agrícola">
+                    alt="Agricultura">
 
                 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
-                    alt="Tecnologia no agro">
+                    alt="Tecnologia agrícola">
 
             </div>
 
@@ -180,19 +195,21 @@
 
         <!-- VÍDEOS -->
 
-        <section class="videos-section" id="videos">
+        <section id="videos">
 
-            <h2>Nossos Vídeos</h2>
+            <h2>Vídeos Educativos</h2>
 
             <div class="videos">
 
-                <iframe src="https://www.youtube.com/embed/7K1sB05pE0A"
-                    title="Tecnologia no Agro"
+                <iframe
+                    src="https://www.youtube.com/embed/ASaMtELenEA"
+                    title="Agricultura Sustentável"
                     allowfullscreen>
                 </iframe>
 
-                <iframe src="https://www.youtube.com/embed/2wLNJr45R9o"
-                    title="Sustentabilidade no Campo"
+                <iframe
+                    src="https://www.youtube.com/embed/gFF8_SZHytE"
+                    title="Embrapa Sustentabilidade"
                     allowfullscreen>
                 </iframe>
 
@@ -202,17 +219,26 @@
 
         <!-- CONTATO -->
 
-        <section class="contato-section" id="contato">
+        <section id="contato">
 
             <h2>Fale Conosco</h2>
 
             <form>
 
-                <input type="text" placeholder="Seu nome" />
+                <input
+                    type="text"
+                    placeholder="Seu nome"
+                    required>
 
-                <input type="email" placeholder="Seu email" />
+                <input
+                    type="email"
+                    placeholder="Seu e-mail"
+                    required>
 
-                <textarea placeholder="Digite sua mensagem"></textarea>
+                <textarea
+                    placeholder="Digite sua mensagem"
+                    required>
+                </textarea>
 
                 <button type="submit" class="btn">
                     Enviar Mensagem
@@ -224,12 +250,12 @@
 
     </main>
 
-    <!-- FOOTER -->
+    <!-- RODAPÉ -->
 
     <footer>
 
         <p>
-            © 2026 AgroTech Sustentável
+            © 2026 AgroTech Sustentável | Projeto Educacional
         </p>
 
     </footer>
