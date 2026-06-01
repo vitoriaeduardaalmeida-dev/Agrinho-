@@ -4,6 +4,7 @@
     --verde:#2d6a4f;
     --verde-claro:#52b788;
     --verde-suave:#95d5b2;
+    --texto:#1f2937;
     --branco:#ffffff;
     --sombra:0 10px 30px rgba(0,0,0,.12);
 }
@@ -15,13 +16,13 @@
 }
 
 html{
-    scroll-behavior:smooth;
     font-size:var(--fonte-base);
+    scroll-behavior:smooth;
 }
 
 body{
     font-family:'Poppins',sans-serif;
-    color:#1f2937;
+    color:var(--texto);
     line-height:1.7;
     overflow-x:hidden;
 
@@ -54,9 +55,9 @@ body{
     height:52px;
     border:none;
     border-radius:50%;
-    cursor:pointer;
     background:var(--verde-escuro);
     color:white;
+    cursor:pointer;
     font-size:1rem;
     box-shadow:var(--sombra);
     transition:.3s;
@@ -73,6 +74,7 @@ header{
     position:sticky;
     top:0;
     z-index:100;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
@@ -103,8 +105,8 @@ nav{
 }
 
 nav a{
-    text-decoration:none;
     color:white;
+    text-decoration:none;
     font-weight:500;
     transition:.3s;
 }
@@ -128,16 +130,9 @@ nav a:hover{
     padding:80px 6%;
 }
 
-.hero-text{
-    animation:fadeIn 1s ease;
-}
-
 .hero-text h1{
+    font-size:clamp(2.5rem,6vw,5rem);
     color:var(--verde-escuro);
-
-    font-size:
-    clamp(2.5rem,6vw,5rem);
-
     margin-bottom:25px;
 }
 
@@ -153,8 +148,8 @@ nav a:hover{
 
 .hero-image img{
     width:100%;
-    max-width:650px;
-    height:420px;
+    max-width:500px;
+    height:320px;
     object-fit:cover;
 
     border-radius:30px;
@@ -173,7 +168,6 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-
     padding:16px 40px;
 
     border:none;
@@ -188,9 +182,7 @@ nav a:hover{
 
     color:white;
     text-decoration:none;
-
     font-weight:600;
-
     cursor:pointer;
 
     box-shadow:
@@ -211,13 +203,9 @@ section{
 
 section h2{
     text-align:center;
-
-    color:var(--verde-escuro);
-
-    font-size:
-    clamp(2rem,4vw,3rem);
-
     margin-bottom:30px;
+    color:var(--verde-escuro);
+    font-size:clamp(2rem,4vw,3rem);
 }
 
 .texto-central{
@@ -230,19 +218,189 @@ section h2{
 
 .cards{
     display:grid;
-
     grid-template-columns:
-    repeat(auto-fit,minmax(260px,1fr));
+    repeat(auto-fit,minmax(250px,1fr));
 
-    gap:30px;
+    gap:25px;
 }
 
 .card{
-    background:
-    rgba(255,255,255,.85);
-
-    backdrop-filter:blur(10px);
-
+    background:white;
     padding:30px;
+    border-radius:20px;
+    text-align:center;
 
-    border
+    box-shadow:
+    0 10px 20px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:60px;
+    height:60px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--verde-escuro);
+}
+
+/* GALERIA */
+
+.galeria{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:15px;
+    justify-items:center;
+}
+
+.galeria img{
+    width:100%;
+    max-width:250px;
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:15px;
+
+    transition:.3s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+}
+
+/* VÍDEOS */
+
+.videos{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+    gap:20px;
+}
+
+iframe{
+    width:100%;
+    height:280px;
+    border:none;
+    border-radius:20px;
+}
+
+/* CONTATO */
+
+form{
+    max-width:700px;
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+input,
+textarea{
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    font-size:1rem;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.08);
+}
+
+textarea{
+    min-height:180px;
+}
+
+form button{
+    align-self:flex-start;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--verde-escuro);
+    color:white;
+    text-align:center;
+    padding:25px;
+}
+
+/* MODO ESCURO */
+
+body.dark{
+    background:#0f172a;
+    color:white;
+}
+
+body.dark header,
+body.dark footer{
+    background:#000;
+}
+
+body.dark .card,
+body.dark input,
+body.dark textarea{
+    background:#1e293b;
+    color:white;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3{
+    color:#95d5b2;
+}
+
+/* RESPONSIVO */
+
+@media (max-width:768px){
+
+    header{
+        justify-content:center;
+        text-align:center;
+        gap:15px;
+    }
+
+    nav{
+        justify-content:center;
+    }
+
+    .hero{
+        text-align:center;
+        gap:30px;
+    }
+
+    .hero-image img{
+        max-width:350px;
+        height:240px;
+    }
+
+    iframe{
+        height:220px;
+    }
+}
+
+@media (max-width:480px){
+
+    .hero-text h1{
+        font-size:2.2rem;
+    }
+
+    .hero-image img{
+        max-width:280px;
+        height:180px;
+    }
+
+    .acessibilidade button{
+        width:42px;
+        height:42px;
+    }
+}
