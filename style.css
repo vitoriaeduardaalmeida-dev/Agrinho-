@@ -25,15 +25,7 @@ body{
     color:var(--texto);
     line-height:1.7;
     overflow-x:hidden;
-
-    background:
-    linear-gradient(
-        135deg,
-        #f5fff5 0%,
-        #e8f5e9 50%,
-        #d8f3dc 100%
-    );
-
+    background:linear-gradient(135deg,#f5fff5 0%,#e8f5e9 50%,#d8f3dc 100%);
     transition:.4s;
 }
 
@@ -56,7 +48,7 @@ body{
     border:none;
     border-radius:50%;
     background:var(--verde-escuro);
-    color:white;
+    color:#fff;
     cursor:pointer;
     font-size:1rem;
     box-shadow:var(--sombra);
@@ -74,26 +66,17 @@ header{
     position:sticky;
     top:0;
     z-index:100;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
     flex-wrap:wrap;
-
     padding:22px 5%;
-
-    background:
-    linear-gradient(
-        90deg,
-        var(--verde-escuro),
-        var(--verde)
-    );
-
+    background:linear-gradient(90deg,var(--verde-escuro),var(--verde));
     box-shadow:0 5px 20px rgba(0,0,0,.15);
 }
 
 .logo{
-    color:white;
+    color:#fff;
     font-size:clamp(1.5rem,2vw,2.4rem);
     font-weight:700;
 }
@@ -105,7 +88,7 @@ nav{
 }
 
 nav a{
-    color:white;
+    color:#fff;
     text-decoration:none;
     font-weight:500;
     transition:.3s;
@@ -119,14 +102,10 @@ nav a:hover{
 
 .hero{
     min-height:90vh;
-
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(350px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
     align-items:center;
     gap:60px;
-
     padding:80px 6%;
 }
 
@@ -151,12 +130,8 @@ nav a:hover{
     max-width:500px;
     height:320px;
     object-fit:cover;
-
     border-radius:30px;
-
-    box-shadow:
-    0 20px 40px rgba(0,0,0,.18);
-
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
     transition:.4s;
 }
 
@@ -164,30 +139,19 @@ nav a:hover{
     transform:scale(1.03);
 }
 
-/* BOTÃO */
+/* BOTÕES */
 
 .btn{
     display:inline-block;
     padding:16px 40px;
-
     border:none;
     border-radius:50px;
-
-    background:
-    linear-gradient(
-        135deg,
-        var(--verde),
-        var(--verde-claro)
-    );
-
-    color:white;
+    background:linear-gradient(135deg,var(--verde),var(--verde-claro));
+    color:#fff;
     text-decoration:none;
     font-weight:600;
     cursor:pointer;
-
-    box-shadow:
-    0 10px 25px rgba(45,106,79,.25);
-
+    box-shadow:0 10px 25px rgba(45,106,79,.25);
     transition:.3s;
 }
 
@@ -218,21 +182,16 @@ section h2{
 
 .cards{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(250px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:25px;
 }
 
 .card{
-    background:white;
+    background:#fff;
     padding:30px;
     border-radius:20px;
     text-align:center;
-
-    box-shadow:
-    0 10px 20px rgba(0,0,0,.08);
-
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
     transition:.3s;
 }
 
@@ -255,9 +214,7 @@ section h2{
 
 .galeria{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
     gap:15px;
     justify-items:center;
 }
@@ -266,11 +223,8 @@ section h2{
     width:100%;
     max-width:250px;
     height:160px;
-
     object-fit:cover;
-
     border-radius:15px;
-
     transition:.3s;
 }
 
@@ -282,9 +236,7 @@ section h2{
 
 .videos{
     display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
-
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
     gap:20px;
 }
 
@@ -295,12 +247,11 @@ iframe{
     border-radius:20px;
 }
 
-/* CONTATO */
+/* FORMULÁRIO */
 
 form{
     max-width:700px;
     margin:auto;
-
     display:flex;
     flex-direction:column;
     gap:15px;
@@ -312,9 +263,7 @@ textarea{
     border:none;
     border-radius:15px;
     font-size:1rem;
-
-    box-shadow:
-    0 5px 15px rgba(0,0,0,.08);
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
 }
 
 textarea{
@@ -329,7 +278,7 @@ form button{
 
 footer{
     background:var(--verde-escuro);
-    color:white;
+    color:#fff;
     text-align:center;
     padding:25px;
 }
@@ -338,7 +287,7 @@ footer{
 
 body.dark{
     background:#0f172a;
-    color:white;
+    color:#fff;
 }
 
 body.dark header,
@@ -350,7 +299,7 @@ body.dark .card,
 body.dark input,
 body.dark textarea{
     background:#1e293b;
-    color:white;
+    color:#fff;
 }
 
 body.dark h1,
@@ -376,6 +325,7 @@ body.dark h3{
     .hero{
         text-align:center;
         gap:30px;
+        grid-template-columns:1fr;
     }
 
     .hero-image img{
