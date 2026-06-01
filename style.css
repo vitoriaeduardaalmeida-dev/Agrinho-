@@ -1,370 +1,267 @@
-:root{
-    --fonte-base:16px;
-    --verde1:#1b4332;
-    --verde2:#2d6a4f;
-    --verde3:#52b788;
-    --claro:#f5fff5;
-}
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    font-size:var(--fonte-base);
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:'Poppins',sans-serif;
-    color:#222;
-    line-height:1.6;
-    overflow-x:hidden;
-
-    background:
-    linear-gradient(
-        rgba(255,255,255,0.88),
-        rgba(255,255,255,0.88)
-    ),
-    url("https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-
-    transition:0.4s;
-}
-
-/* ACESSIBILIDADE */
-
-.acessibilidade{
-    position:fixed;
-    top:50%;
-    right:15px;
-    transform:translateY(-50%);
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-    z-index:9999;
-}
-
-.acessibilidade button{
-    width:50px;
-    height:50px;
-    border:none;
-    border-radius:50%;
-    background:var(--verde1);
-    color:white;
-    cursor:pointer;
-    font-size:1rem;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-    transition:.3s;
-}
-
-.acessibilidade button:hover{
-    transform:scale(1.1);
-    background:var(--verde3);
-}
-
-/* HEADER */
-
-header{
-    background:linear-gradient(90deg,var(--verde1),var(--verde2));
-    padding:20px 5%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    flex-wrap:wrap;
-    gap:15px;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.logo{
-    color:white;
-    font-weight:700;
-    font-size:clamp(1.2rem,2vw,2rem);
-}
-
-nav{
-    display:flex;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    font-weight:500;
-    transition:.3s;
-}
-
-nav a:hover{
-    color:#b7efc5;
-}
-
-/* HERO */
-
-.hero{
-    min-height:90vh;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    align-items:center;
-    gap:40px;
-    padding:80px 5%;
-}
-
-.hero-text{
-    background:rgba(255,255,255,.75);
-    backdrop-filter:blur(10px);
-    padding:30px;
-    border-radius:25px;
-}
-
-.hero-text h1{
-    font-size:clamp(2rem,6vw,4.5rem);
-    color:var(--verde1);
-    margin-bottom:20px;
-}
-
-.hero-text p{
-    font-size:clamp(1rem,2vw,1.2rem);
-}
-
-.hero-image{
-    display:flex;
-    justify-content:center;
-}
-
-.hero-image img{
-    width:100%;
-    max-width:550px;
-    border-radius:25px;
-    object-fit:cover;
-    box-shadow:0 10px 30px rgba(0,0,0,.25);
-}
-
-/* BOTÕES */
-
-.btn{
-    margin-top:20px;
-    padding:15px 30px;
-    border:none;
-    border-radius:50px;
-    background:linear-gradient(90deg,var(--verde2),var(--verde3));
-    color:white;
-    cursor:pointer;
-    font-size:1rem;
-    transition:.3s;
-}
-
-.btn:hover{
-    transform:translateY(-3px);
-}
-
-/* SEÇÕES */
-
-section{
-    padding:80px 5%;
-}
-
-section h2{
-    text-align:center;
-    color:var(--verde1);
-    margin-bottom:35px;
-    font-size:clamp(2rem,4vw,3rem);
-}
-
-.texto-central{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:1.1rem;
-}
-
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
-}
-
-.card{
-    background:rgba(255,255,255,.85);
-    backdrop-filter:blur(12px);
-    border-radius:25px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 8px 20px rgba(0,0,0,.12);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.card img{
-    width:80px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:var(--verde2);
-    margin-bottom:10px;
-}
-
-/* GALERIA */
-
-.galeria{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.galeria img{
-    width:100%;
-    height:260px;
-    object-fit:cover;
-    border-radius:20px;
-    transition:.3s;
-}
-
-.galeria img:hover{
-    transform:scale(1.03);
-}
-
-/* VÍDEOS */
-
-.videos{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-iframe{
-    width:100%;
-    height:300px;
-    border:none;
-    border-radius:20px;
-    box-shadow:0 8px 20px rgba(0,0,0,.2);
-}
-
-/* FORMULÁRIO */
-
-form{
-    max-width:700px;
-    margin:auto;
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-input,
-textarea{
-    padding:15px;
-    border:none;
-    border-radius:15px;
-    font-size:1rem;
-    box-shadow:0 5px 15px rgba(0,0,0,.1);
-}
-
-textarea{
-    min-height:180px;
-    resize:none;
-}
-
-/* FOOTER */
-
-footer{
-    background:var(--verde1);
-    color:white;
-    text-align:center;
-    padding:30px;
-    margin-top:40px;
-}
-
-/* MODO ESCURO */
-
-.dark{
-    color:white;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,.80),
-        rgba(0,0,0,.80)
-    ),
-    url("https://images.pexels.com/photos/2132250/pexels-photo-2132250.jpeg");
-
-    background-size:cover;
-    background-position:center;
-    background-attachment:fixed;
-}
-
-.dark header{
-    background:#000;
-}
-
-.dark footer{
-    background:#000;
-}
-
-.dark .hero-text,
-.dark .card{
-    background:rgba(30,30,30,.85);
-    color:white;
-}
-
-.dark h2{
-    color:#95d5b2;
-}
-
-.dark input,
-.dark textarea{
-    background:#222;
-    color:white;
-}
-
-/* RESPONSIVIDADE */
-
-@media(max-width:768px){
-
-    header{
-        justify-content:center;
-        text-align:center;
-    }
-
-    nav{
-        justify-content:center;
-    }
-
-    .hero{
-        text-align:center;
-    }
-
-    .hero-image img{
-        max-width:100%;
-    }
-
-    iframe{
-        height:220px;
-    }
-
-}
-
-@media(max-width:480px){
-
-    .acessibilidade{
-        right:5px;
-    }
-
-    .acessibilidade button{
-        width:42px;
-        height:42px;
-        font-size:.9rem;
-    }
-
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroTech Sustentável</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ACESSIBILIDADE -->
+
+    <aside class="acessibilidade" aria-label="Ferramentas de acessibilidade">
+
+        <button id="aumentar-fonte" title="Aumentar fonte">
+            A+
+        </button>
+
+        <button id="diminuir-fonte" title="Diminuir fonte">
+            A-
+        </button>
+
+        <button id="tema-btn" title="Modo escuro ou claro">
+            🌙
+        </button>
+
+        <button id="ler-pagina" title="Ler conteúdo">
+            🔊
+        </button>
+
+        <button id="parar-leitura" title="Parar leitura">
+            ⏹
+        </button>
+
+    </aside>
+
+    <!-- CABEÇALHO -->
+
+    <header>
+
+        <div class="logo">
+            🌱 AgroTech Sustentável
+        </div>
+
+        <nav>
+
+            <a href="#inicio">Início</a>
+
+            <a href="#sobre">Sobre</a>
+
+            <a href="#beneficios">Benefícios</a>
+
+            <a href="#galeria">Galeria</a>
+
+            <a href="#videos">Vídeos</a>
+
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main id="conteudo-principal">
+
+        <!-- HERO -->
+
+        <section class="hero" id="inicio">
+
+            <div class="hero-text">
+
+                <h1>
+                    Agro Forte, Futuro Sustentável
+                </h1>
+
+                <p>
+                    Equilíbrio entre produção agrícola e preservação ambiental.
+                    A tecnologia impulsiona a produtividade enquanto protege os
+                    recursos naturais para as próximas gerações.
+                </p>
+
+                <button class="btn">
+                    Saiba Mais 🚜
+                </button>
+
+            </div>
+
+            <div class="hero-image">
+
+                <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854"
+                    alt="Plantação agrícola sustentável">
+
+            </div>
+
+        </section>
+
+        <!-- SOBRE -->
+
+        <section id="sobre">
+
+            <h2>Sobre o Projeto</h2>
+
+            <p class="texto-central">
+                O agronegócio sustentável busca produzir alimentos de forma
+                eficiente e responsável, reduzindo impactos ambientais,
+                preservando a biodiversidade e utilizando recursos naturais
+                de maneira consciente.
+            </p>
+
+        </section>
+
+        <!-- BENEFÍCIOS -->
+
+        <section id="beneficios">
+
+            <h2>Benefícios da Agricultura Sustentável</h2>
+
+            <div class="cards">
+
+                <article class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/2909/2909768.png"
+                        alt="Tecnologia">
+
+                    <h3>Inovação</h3>
+
+                    <p>
+                        Uso de sensores, drones e inteligência agrícola.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/628/628324.png"
+                        alt="Sustentabilidade">
+
+                    <h3>Sustentabilidade</h3>
+
+                    <p>
+                        Produção com menor impacto ao meio ambiente.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <img src="https://cdn-icons-png.flaticon.com/512/1048/1048941.png"
+                        alt="Produtividade">
+
+                    <h3>Produtividade</h3>
+
+                    <p>
+                        Maior eficiência e redução de desperdícios.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- GALERIA -->
+
+        <section id="galeria">
+
+            <h2>Galeria</h2>
+
+            <div class="galeria">
+
+                <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399"
+                    alt="Plantação">
+
+                <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6"
+                    alt="Campo verde">
+
+                <img src="https://images.unsplash.com/photo-1492496913980-501348b61469"
+                    alt="Agricultura">
+
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                    alt="Tecnologia agrícola">
+
+            </div>
+
+        </section>
+
+        <!-- VÍDEOS -->
+
+        <section id="videos">
+
+            <h2>Vídeos Educativos</h2>
+
+            <div class="videos">
+
+                <iframe
+                    src="https://www.youtube.com/embed/ASaMtELenEA"
+                    title="Agricultura Sustentável"
+                    allowfullscreen>
+                </iframe>
+
+                <iframe
+                    src="https://www.youtube.com/embed/gFF8_SZHytE"
+                    title="Embrapa Sustentabilidade"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </section>
+
+        <!-- CONTATO -->
+
+        <section id="contato">
+
+            <h2>Fale Conosco</h2>
+
+            <form>
+
+                <input
+                    type="text"
+                    placeholder="Seu nome"
+                    required>
+
+                <input
+                    type="email"
+                    placeholder="Seu e-mail"
+                    required>
+
+                <textarea
+                    placeholder="Digite sua mensagem"
+                    required>
+                </textarea>
+
+                <button type="submit" class="btn">
+                    Enviar Mensagem
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © 2026 AgroTech Sustentável | Projeto Educacional
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
