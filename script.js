@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // AUMENTAR E DIMINUIR FONTE
+    // TAMANHO DA FONTE
 
     let tamanhoFonte = 16;
 
@@ -19,14 +19,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (aumentarFonte) {
         aumentarFonte.addEventListener("click", () => {
-
             tamanhoFonte += 2;
 
             document.documentElement.style.setProperty(
                 "--fonte-base",
                 tamanhoFonte + "px"
             );
-
         });
     }
 
@@ -70,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 fala.rate = 1;
 
                 window.speechSynthesis.speak(fala);
+
             }
 
         });
@@ -79,9 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (pararLeitura) {
 
         pararLeitura.addEventListener("click", () => {
-
             window.speechSynthesis.cancel();
-
         });
 
     }
