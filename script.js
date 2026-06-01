@@ -1,75 +1,89 @@
-// MODO ESCURO
+document.addEventListener("DOMContentLoaded", () => {
 
-const temaBtn = document.getElementById("tema-btn");
+    // MODO ESCURO
 
-temaBtn.addEventListener("click", () => {
+    const temaBtn = document.getElementById("tema-btn");
 
-    document.body.classList.toggle("dark");
+    if (temaBtn) {
+        temaBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+        });
+    }
 
-});
+    // AUMENTAR E DIMINUIR FONTE
 
-// ACESSIBILIDADE
+    let tamanhoFonte = 16;
 
-let tamanhoFonte = 16;
+    const aumentarFonte = document.getElementById("aumentar-fonte");
+    const diminuirFonte = document.getElementById("diminuir-fonte");
 
-const aumentarFonte = document.getElementById("aumentar-fonte");
+    if (aumentarFonte) {
+        aumentarFonte.addEventListener("click", () => {
 
-const diminuirFonte = document.getElementById("diminuir-fonte");
+            tamanhoFonte += 2;
 
-aumentarFonte.addEventListener("click", () => {
+            document.documentElement.style.setProperty(
+                "--fonte-base",
+                tamanhoFonte + "px"
+            );
 
-    tamanhoFonte += 2;
+        });
+    }
 
-    document.documentElement.style.setProperty(
-        "--fonte-base",
-        tamanhoFonte + "px"
-    );
+    if (diminuirFonte) {
+        diminuirFonte.addEventListener("click", () => {
 
-});
+            if (tamanhoFonte > 10) {
 
-diminuirFonte.addEventListener("click", () => {
+                tamanhoFonte -= 2;
 
-    if(tamanhoFonte > 10){
+                document.documentElement.style.setProperty(
+                    "--fonte-base",
+                    tamanhoFonte + "px"
+                );
 
-        tamanhoFonte -= 2;
+            }
 
-        document.documentElement.style.setProperty(
-            "--fonte-base",
-            tamanhoFonte + "px"
-        );
+        });
+    }
+
+    // LEITURA POR VOZ
+
+    const lerPagina = document.getElementById("ler-pagina");
+    const pararLeitura = document.getElementById("parar-leitura");
+
+    if (lerPagina) {
+
+        lerPagina.addEventListener("click", () => {
+
+            window.speechSynthesis.cancel();
+
+            const conteudo = document.getElementById("conteudo-principal");
+
+            if (conteudo) {
+
+                const fala = new SpeechSynthesisUtterance(
+                    conteudo.innerText
+                );
+
+                fala.lang = "pt-BR";
+                fala.rate = 1;
+
+                window.speechSynthesis.speak(fala);
+            }
+
+        });
 
     }
 
-});
+    if (pararLeitura) {
 
-// LEITURA POR VOZ
+        pararLeitura.addEventListener("click", () => {
 
-const lerPagina = document.getElementById("ler-pagina");
+            window.speechSynthesis.cancel();
 
-const pararLeitura = document.getElementById("parar-leitura");
+        });
 
-const sintetizador = window.speechSynthesis;
-
-lerPagina.addEventListener("click", () => {
-
-    sintetizador.cancel();
-
-    const conteudo = document.getElementById(
-        "conteudo-principal"
-    ).innerText;
-
-    const fala = new SpeechSynthesisUtterance(conteudo);
-
-    fala.lang = "pt-BR";
-
-    fala.rate = 1;
-
-    sintetizador.speak(fala);
-
-});
-
-pararLeitura.addEventListener("click", () => {
-
-    sintetizador.cancel();
+    }
 
 });
