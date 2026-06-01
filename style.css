@@ -4,6 +4,8 @@
     --verde:#2d6a4f;
     --verde-claro:#52b788;
     --verde-suave:#95d5b2;
+    --texto:#1f2937;
+    --branco:#ffffff;
 }
 
 *{
@@ -19,7 +21,7 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    color:#1f2937;
+    color:var(--texto);
     line-height:1.7;
     overflow-x:hidden;
 
@@ -30,6 +32,8 @@ body{
         #e8f5e9 50%,
         #d8f3dc 100%
     );
+
+    transition:0.4s;
 }
 
 /* ACESSIBILIDADE */
@@ -50,11 +54,11 @@ body{
     height:50px;
     border:none;
     border-radius:50%;
-    cursor:pointer;
     background:var(--verde-escuro);
     color:white;
+    cursor:pointer;
     font-size:1rem;
-    transition:.3s;
+    transition:0.3s;
 }
 
 .acessibilidade button:hover{
@@ -85,7 +89,7 @@ header{
 
 .logo{
     color:white;
-    font-size:clamp(1.3rem,2vw,2rem);
+    font-size:2rem;
     font-weight:700;
 }
 
@@ -99,6 +103,7 @@ nav a{
     color:white;
     text-decoration:none;
     font-weight:500;
+    transition:.3s;
 }
 
 nav a:hover{
@@ -108,33 +113,28 @@ nav a:hover{
 /* HERO */
 
 .hero{
-    min-height:85vh;
+    min-height:90vh;
 
     display:grid;
     grid-template-columns:
     repeat(auto-fit,minmax(320px,1fr));
 
     align-items:center;
-    gap:40px;
+    gap:50px;
 
-    padding:70px 6%;
+    padding:80px 6%;
 }
 
 .hero-text h1{
-    font-size:
-    clamp(2rem,5vw,4.5rem);
-
+    font-size:clamp(2.5rem,6vw,5rem);
     color:var(--verde-escuro);
-
     margin-bottom:20px;
 }
 
 .hero-text p{
-    font-size:1.1rem;
+    font-size:1.2rem;
     margin-bottom:25px;
 }
-
-/* IMAGEM PRINCIPAL MENOR */
 
 .hero-image{
     display:flex;
@@ -157,7 +157,6 @@ nav a:hover{
 
 .btn{
     display:inline-block;
-
     padding:14px 35px;
 
     border:none;
@@ -173,39 +172,13 @@ nav a:hover{
     color:white;
     text-decoration:none;
     font-weight:600;
-
     cursor:pointer;
 
     transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-4px);
-}
-
-/* ESTATÍSTICAS */
-
-.estatisticas{
-    display:grid;
-    grid-template-columns:
-    repeat(auto-fit,minmax(220px,1fr));
-
-    gap:20px;
-
-    padding:40px 6%;
-}
-
-.estatisticas div{
-    background:white;
-    padding:25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-}
-
-.estatisticas h3{
-    font-size:2rem;
-    color:var(--verde);
+    transform:translateY(-5px);
 }
 
 /* SEÇÕES */
@@ -216,9 +189,9 @@ section{
 
 section h2{
     text-align:center;
-    color:var(--verde-escuro);
-
     margin-bottom:30px;
+
+    color:var(--verde-escuro);
 
     font-size:
     clamp(2rem,4vw,3rem);
@@ -230,11 +203,33 @@ section h2{
     text-align:center;
 }
 
+/* ESTATÍSTICAS */
+
+.estatisticas{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:20px;
+}
+
+.estatisticas div{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.estatisticas h3{
+    color:var(--verde);
+    font-size:2rem;
+}
+
 /* CARDS */
 
 .cards{
     display:grid;
-
     grid-template-columns:
     repeat(auto-fit,minmax(250px,1fr));
 
@@ -243,15 +238,12 @@ section h2{
 
 .card{
     background:white;
-
     padding:30px;
-
-    border-radius:25px;
-
+    border-radius:20px;
     text-align:center;
 
     box-shadow:
-    0 10px 25px rgba(0,0,0,.08);
+    0 10px 20px rgba(0,0,0,.08);
 
     transition:.3s;
 }
@@ -260,39 +252,38 @@ section h2{
     transform:translateY(-8px);
 }
 
-/* ÍCONES MENORES */
-
 .card img{
     width:60px;
     height:60px;
-    object-fit:contain;
     margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:var(--verde-escuro);
 }
 
 /* GALERIA */
 
 .galeria{
     display:grid;
-
     grid-template-columns:
     repeat(auto-fit,minmax(220px,1fr));
 
     gap:15px;
 }
 
-/* IMAGENS MENORES */
-
 .galeria img{
     width:100%;
     max-width:280px;
     height:180px;
 
+    margin:auto;
+    display:block;
+
     object-fit:cover;
 
     border-radius:15px;
-
-    display:block;
-    margin:auto;
 
     transition:.3s;
 }
@@ -305,7 +296,6 @@ section h2{
 
 .videos{
     display:grid;
-
     grid-template-columns:
     repeat(auto-fit,minmax(320px,1fr));
 
@@ -319,7 +309,7 @@ iframe{
     border-radius:20px;
 }
 
-/* FORMULÁRIO */
+/* CONTATO */
 
 form{
     max-width:700px;
@@ -335,7 +325,6 @@ textarea{
     padding:15px;
     border:none;
     border-radius:15px;
-
     font-size:1rem;
 
     box-shadow:
@@ -344,6 +333,10 @@ textarea{
 
 textarea{
     min-height:180px;
+}
+
+form button{
+    align-self:flex-start;
 }
 
 /* FOOTER */
@@ -362,16 +355,15 @@ footer{
     color:white;
 }
 
-.dark header{
-    background:#000;
-}
-
+.dark header,
 .dark footer{
     background:#000;
 }
 
 .dark .card,
-.dark .estatisticas div{
+.dark .estatisticas div,
+.dark input,
+.dark textarea{
     background:#1e293b;
     color:white;
 }
@@ -383,6 +375,7 @@ footer{
     header{
         justify-content:center;
         text-align:center;
+        gap:15px;
     }
 
     nav{
@@ -400,5 +393,22 @@ footer{
 
     iframe{
         height:220px;
+    }
+}
+
+@media(max-width:480px){
+
+    .hero-text h1{
+        font-size:2.2rem;
+    }
+
+    .hero-image img{
+        max-width:280px;
+        height:180px;
+    }
+
+    .acessibilidade button{
+        width:42px;
+        height:42px;
     }
 }
